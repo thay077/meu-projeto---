@@ -18,7 +18,7 @@
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Sobre</a></li>
                 <li><a href="#">Produtos</a></li>
-                <li><a href="#">Contato</a></li>
+                <li><a href="#" id="cartButton">Carrinho (<span id="cartCount">0</span>)</a></li>
             </ul>
         </nav>
     </header>
@@ -41,6 +41,18 @@
 
             <!-- Adicione mais produtos aqui -->
         </section>
+
+        <!-- Carrinho Modal -->
+        <div id="cartModal" class="cart-modal">
+            <div class="cart-content">
+                <h2>Carrinho de Compras</h2>
+                <ul id="cartItems"></ul>
+                <p><strong>Total: R$ <span id="totalPrice">0.00</span></strong></p>
+                <button onclick="clearCart()">Limpar Carrinho</button>
+                <button onclick="checkout()">Finalizar Compra</button>
+                <button onclick="closeCart()">Fechar</button>
+            </div>
+        </div>
     </main>
 
     <footer>
